@@ -11,17 +11,17 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "mvn test"
+                echo 'mvn test'
             }
             post{
                 always{
-                    junit "target/surefire-reports/*.xml"
+                    junit 'target/surefire-reports/*.xml'
                 }
             }
         }
         stage('Delivery'){
             steps{
-                sh "./jenkins/scritps/deviler.sh"
+                sh './jenkins/scritps/deviler.sh'
             }
         }
     }
