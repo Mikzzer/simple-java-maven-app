@@ -19,8 +19,8 @@ pipeline {
                 }
             }
         }
-        stage('Delivery'){
-            steps{
+        stage('Delivery') {
+            steps {
                 sh './jenkins/scritps/deviler.sh'
             }
         }
