@@ -1,7 +1,10 @@
 pipeline {
     agent any
+    tools{
+        maven '3.9.1'
+    }
     stages {
-        stage('CleanUp') {
+        stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean  package'
             }
